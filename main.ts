@@ -8,11 +8,15 @@ basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
         basic.showIcon(IconNames.SmallDiamond)
+        huskylens.writeOSD("Rock", 150, 100)
     } else if (huskylens.isAppear(2, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
         basic.showIcon(IconNames.Square)
+        huskylens.writeOSD("Paper", 150, 100)
     } else if (huskylens.isAppear(3, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
         basic.showIcon(IconNames.Scissors)
+        huskylens.writeOSD("Scissors", 150, 100)
     } else {
         basic.showIcon(IconNames.No)
+        huskylens.clearOSD()
     }
 })
