@@ -1,5 +1,8 @@
 huskylens.initI2c()
 huskylens.initMode(protocolAlgorithm.OBJECTCLASSIFICATION)
+huskylens.writeName(1, "Rock")
+huskylens.writeName(2, "Paper")
+huskylens.writeName(3, "Scissors")
 basic.showIcon(IconNames.Heart)
 basic.forever(function () {
     huskylens.request()
