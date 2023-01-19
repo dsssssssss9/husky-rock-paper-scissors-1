@@ -1,9 +1,19 @@
+function Compare () {
+	
+}
 huskylens.initI2c()
 huskylens.initMode(protocolAlgorithm.OBJECTCLASSIFICATION)
+huskylens.clearOSD()
 huskylens.writeName(1, "Rock")
 huskylens.writeName(2, "Paper")
 huskylens.writeName(3, "Scissors")
-basic.showIcon(IconNames.Heart)
+huskylens.writeOSD("Rock paper Scissors", 75, 30)
+basic.pause(2000)
+let Scissors = 1
+let Paper = -1
+let Rock = 0
+let Maqueen = 2
+let Player = 2
 basic.forever(function () {
     huskylens.request()
     if (huskylens.isAppear(1, HUSKYLENSResultType_t.HUSKYLENSResultBlock)) {
